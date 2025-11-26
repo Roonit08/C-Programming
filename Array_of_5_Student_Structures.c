@@ -1,3 +1,5 @@
+// Create an array of 5 student structures and input/output their details (name, roll number, section, semester).
+
 #include <stdio.h>
 struct student {
     char name[50];

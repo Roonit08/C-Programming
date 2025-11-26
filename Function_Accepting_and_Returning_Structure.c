@@ -1,3 +1,5 @@
+// Write a function that accepts a structure as a parameter, modifies it, and returns the modified structure.
+
 #include <stdio.h>
 struct student {
     char name[50];

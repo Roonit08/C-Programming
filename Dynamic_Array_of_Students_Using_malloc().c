@@ -1,3 +1,5 @@
+// Use malloc() to dynamically allocate an array of N students, input their data, and display the information.
+
 #include <stdio.h>
 #include <stdlib.h>
 struct Date {

@@ -1,3 +1,5 @@
+// Create a structure with a function pointer and call a function using the pointer.
+
 #include <stdio.h>
 #include <stdlib.h>
 struct student {

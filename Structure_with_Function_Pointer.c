@@ -1,9 +1,9 @@
+// Create a structure with a function pointer and call a function using the pointer.
+
 #include <stdio.h>
-// Structure with function pointer
 struct Calculator {
     int (*operation)(int, int);  // function pointer
 };
-// Function to add two numbers
 int add(int a, int b) {
     return a + b;
 }

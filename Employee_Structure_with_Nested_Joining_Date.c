@@ -1,3 +1,5 @@
+// Create an employee structure that contains another structure as a member for the joining date.
+
 #include <stdio.h>
 // Structure for joining date
 struct Date {
