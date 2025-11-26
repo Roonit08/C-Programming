@@ -2,31 +2,31 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-struct Date {
-    int day, month, year;
+
+struct Student {
+    char name[20];
+    int roll;
 };
-struct Employee {
-    char name[50];
-    int id;
-    float salary;
-    struct Date joining_date;
-};
+
 int main() {
-    int N, i;
-    scanf("%d", &N);  // number of students
-    struct Employee *students = malloc(N * sizeof(*students));
-    for(i = 0; i < N; i++)
-        scanf("%s %d %f %d %d %d", 
-              students[i].name, &students[i].id, &students[i].salary,
-              &students[i].joining_date.day,
-              &students[i].joining_date.month,
-              &students[i].joining_date.year);
-    for(i = 0; i < N; i++)
-        printf("%s %d %.2f %02d-%02d-%04d\n",
-               students[i].name, students[i].id, students[i].salary,
-               students[i].joining_date.day,
-               students[i].joining_date.month,
-               students[i].joining_date.year);
-    free(students);
+    struct Student *s;
+    int n, i;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    s = malloc(n * sizeof(struct Student));
+
+    for (i = 0; i < n; i++) {
+        printf("Enter name and roll: ");
+        scanf("%s %d", s[i].name, &s[i].roll);
+    }
+
+    printf("\n--- Student Details ---\n");
+    for (i = 0; i < n; i++) {
+        printf("Name: %s  Roll: %d\n", s[i].name, s[i].roll);
+    }
+
+    free(s);
     return 0;
 }

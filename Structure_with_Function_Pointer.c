@@ -1,18 +1,15 @@
 // Create a structure with a function pointer and call a function using the pointer.
 
 #include <stdio.h>
-struct Calculator {
-    int (*operation)(int, int);  // function pointer
-};
-int add(int a, int b) {
-    return a + b;
+void hello() {
+    printf("Hello from function pointer!\n");
 }
+struct Test {
+    void (*fp)();   // function pointer
+};
 int main() {
-    struct Calculator calc;
-    // Assign function pointer
-    calc.operation = add;
-    // Call function using pointer
-    int result = calc.operation(5, 3);
-    printf("Result: %d\n", result);  // Output: 8
+    struct Test t;
+    t.fp = hello;   // assign function to pointer
+    t.fp();         // call function using pointer
     return 0;
 }

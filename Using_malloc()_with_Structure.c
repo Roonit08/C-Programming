@@ -1,4 +1,4 @@
-// Create a structure with a function pointer and call a function using the pointer.
+// Use malloc() to allocate memory for a student structure, store data, print the data, and free the allocated memory.
 
 #include <stdio.h>
 #include <stdlib.h>
